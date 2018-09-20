@@ -8,7 +8,7 @@ RUN sed -i '/<\/tomcat-users>/ i\<user username="admin" password="admin" roles="
 WORKDIR /usr/src/
 RUN wget  https://downloads.sourceforge.net/project/pebble/pebble/2.6.4/pebble-2.6.4.zip
 RUN unzip pebble-2.6.4.zip
-RUN mv pebble-2*/ /opt/tomcat/webapps/
+RUN mv pebble-2*/ /usr/local/tomcat/webapps/
 CMD /usr/local/tomcat/bin/catalina.sh run
 EXPOSE 8080
 
