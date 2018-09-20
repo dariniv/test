@@ -4,7 +4,7 @@ RUN apt-get -y install openjdk-8-jdk wget unzip
 RUN wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN mv /tmp/apache-tomcat-8.5.34* /usr/local/tomcat
-RUN sed -i '/<\/tomcat-users>/ i\<user username="admin" password="admin" roles="admin"/>' /usr/local/tomcat/conf/tomcat-users.xml
+RUN sed -i '/<\/tomcat-users>/ i\<user username="admin" password="admin" roles="admin-gui"/>' /usr/local/tomcat/conf/tomcat-users.xml
 WORKDIR /usr/src/
 RUN wget  https://downloads.sourceforge.net/project/pebble/pebble/2.6.4/pebble-2.6.4.zip
 RUN unzip pebble-2.6.4.zip
